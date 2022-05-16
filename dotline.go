@@ -1,6 +1,6 @@
 package linedraw
 
-import "fmt"
+import "os"
 
 const (
 	dotLight = "\u2504"
@@ -16,9 +16,9 @@ func NewDotLine(linelentgh int) *dotline {
 }
 
 func (h *dotline) Light() {
-	fmt.Print(lineLength(h.length, dotLight))
+	print(os.Stdout, lineLength(h.length, dotLight))
 }
 
 func (h *dotline) Bold() {
-	fmt.Print(lineLength(h.length, dotBold))
+	print(os.Stdout, lineLength(h.length, dotBold))
 }

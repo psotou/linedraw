@@ -1,6 +1,6 @@
 package linedraw
 
-import "fmt"
+import "os"
 
 const (
 	vlineLight = "\u2502"
@@ -16,9 +16,9 @@ func NewVLine(linelentgh int) *vline {
 }
 
 func (h *vline) Light() {
-	fmt.Print(lineLength(h.length, vlineLight))
+	print(os.Stdout, lineLength(h.length, vlineLight))
 }
 
 func (h *vline) Bold() {
-	fmt.Print(lineLength(h.length, vlineBold))
+	print(os.Stdout, lineLength(h.length, vlineBold))
 }

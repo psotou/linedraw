@@ -2,6 +2,8 @@ package linedraw
 
 import (
 	"fmt"
+	"io"
+	"os"
 	"strings"
 )
 
@@ -19,11 +21,15 @@ func NewHLine(linelentgh int) *hline {
 }
 
 func (h *hline) Light() {
-	fmt.Print(lineLength(h.length, lineLight))
+	print(os.Stdout, lineLength(h.length, lineLight))
 }
 
 func (h *hline) Bold() {
-	fmt.Print(lineLength(h.length, lineBold))
+	print(os.Stdout, lineLength(h.length, lineBold))
+}
+
+func print(w io.Writer, line string) {
+	fmt.Fprintf(w, line)
 }
 
 func lineLength(length int, lineType string) string {
