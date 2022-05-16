@@ -8,8 +8,8 @@ import (
 )
 
 const (
-	lineLight = "\u2500"
-	lineBold  = "\u2501"
+	hlineLight = "\u2500"
+	hlineBold  = "\u2501"
 )
 
 type hline struct {
@@ -21,11 +21,11 @@ func NewHLine(linelentgh int) *hline {
 }
 
 func (h *hline) Light() {
-	print(os.Stdout, lineLength(h.length, lineLight))
+	print(os.Stdout, lineLength(h.length, hlineLight))
 }
 
 func (h *hline) Bold() {
-	print(os.Stdout, lineLength(h.length, lineBold))
+	print(os.Stdout, lineLength(h.length, hlineBold))
 }
 
 func print(w io.Writer, line string) {

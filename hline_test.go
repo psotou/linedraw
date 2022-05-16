@@ -19,4 +19,18 @@ func TestHLine(t *testing.T) {
 			t.Errorf("got %v, want %v", got, want)
 		}
 	})
+
+	t.Run("should print \u2500 (a horizontal light line)", func(t *testing.T) {
+		lightLine := "\u2500"
+
+		var output bytes.Buffer
+		print(&output, lightLine)
+
+		got := output.String()
+		want := lightLine
+
+		if got != want {
+			t.Errorf("got %v, want %v", got, want)
+		}
+	})
 }
