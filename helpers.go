@@ -12,8 +12,8 @@ func print(w io.Writer, line string) {
 
 func lineLength(length int, lineType string) string {
 	var linelen []string
-	for i := 0; i < length+1; i++ {
+	for i := 0; i < length; i++ {
 		linelen = append(linelen, lineType)
 	}
-	return fmt.Sprintf("%v\n", strings.Join(linelen, ""))
+	return fmt.Sprintf("%v", strings.Join(linelen, ""))
 }
