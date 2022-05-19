@@ -1,6 +1,6 @@
 # Usage
 
-![Go](https://github.com/psotou/linedraw/workflows/Go/badge.svg)
+![Go](https://github.com/psotou/linedraw/actions/workflows/go.yml/badge.svg)
 
 Import the package in order to use the line drawing of your choice:
 

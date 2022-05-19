@@ -31,7 +31,7 @@ func TestLineLenght(t *testing.T) {
 		linetype    string
 		want        string
 	}{
-		{"should return a dotted vertical bold line of lenght 4", "\u2507", "\u2507\u2507\u2507\u2507\n"},
+		{"should return a dotted vertical bold line of lenght 4", "\u2507", "\u2507\u2507\u2507\u2507"},
 		{"should return a dotted vertical light line of lenght 4", "\u2506", "\u2506\u2506\u2506\u2506\n"},
 	}
 
