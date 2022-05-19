@@ -1,5 +1,7 @@
 # Usage
 
+![Go](https://github.com/psotou/linedraw/workflows/Go/badge.svg)
+
 Import the package in order to use the line drawing of your choice:
 
 ```go
@@ -12,10 +14,10 @@ And then use one of the four line drawing available by calling the type of line 
 
 ```go
 // we need to pass the length of the desired line to the factory function
-hline := linedraw.NewHLine(12)
-hline.Bold()
+line := NewLine(12)
+line.Horizontal.Bold()
 fmt.Println("hola")
-hline.Light()
+line.Horizontal.Light()
 ```
 
 This will output the following:
@@ -26,7 +28,7 @@ hola
 ─────────────────────────
 ```
 
-The other options available are vertical lines, dotted horizontal lines and dotted vertical lines, which will produce the following output:
+The other options available are `Vertical`, `HorizontalDotted` and `VerticalDotted`, which will produce the following output:
 
 ```shell
 ┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃
